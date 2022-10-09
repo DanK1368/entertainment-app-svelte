@@ -11,7 +11,7 @@
 	<img src={logo} alt="" />
 
 	<nav class=" flex justify-center items-center gap-6 flex-1 ">
-		<a href="/">
+		<a href="/movies">
 			<img src={home} alt="" aria-label="click to go to home-page" />
 		</a>
 
@@ -23,7 +23,7 @@
 			<img src={tvShows} alt="" aria-label="click to go to tvshows-page" />
 		</a>
 
-		<a href="/bookmark">
+		<a href="/bookmarked">
 			<img src={bookmark} alt="" aria-label="click to go to bookmarks-page" />
 		</a>
 	</nav>

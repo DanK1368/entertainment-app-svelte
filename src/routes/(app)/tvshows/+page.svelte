@@ -1,1 +1,13 @@
-<h1>TV SHOWS</h1>
+<script>
+	import CardGrid from '../../../components/CardGrid.svelte';
+	import Card from '../../../components/Card.svelte';
+
+	export let data;
+	const { topRatedTvShows } = data;
+</script>
+
+<CardGrid title="TV Series">
+	{#each topRatedTvShows as show (show.id)}
+		<Card {show} />
+	{/each}
+</CardGrid>

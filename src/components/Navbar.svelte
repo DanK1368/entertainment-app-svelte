@@ -11,7 +11,7 @@
 	<img src={logo} alt="" />
 
 	<nav class=" flex justify-center items-center gap-6 flex-1 ">
-		<a href="/movies">
+		<a href="/">
 			<img src={home} alt="" aria-label="click to go to home-page" />
 		</a>
 

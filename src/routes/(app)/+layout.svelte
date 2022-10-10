@@ -5,7 +5,6 @@
 </script>
 
 <Navbar />
-<SearchBar />
-<div class=" pt-6 px-4 ">
+<div class=" px-4 ">
 	<slot />
 </div>

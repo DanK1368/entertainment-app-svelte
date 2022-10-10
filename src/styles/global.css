@@ -24,4 +24,14 @@
 	.customRegistrationForm {
 		@apply bg-baseColor py-8  px-6 flex flex-col justify-center gap-8 w-full rounded-xl;
 	}
+
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* For IE, Edge and Firefox */
+	.scrollbar-hide {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
 }

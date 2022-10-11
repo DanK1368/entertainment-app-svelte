@@ -8,9 +8,10 @@
 </script>
 
 <div class=" flex flex-col gap-2 ">
-	<div
-		class="min-w-[164px] h-[110px] rounded-lg flex flex-col justify-between py-3 px-2 bg-cover "
-		style={`background-image: url('${TMDB_IMAGE_URL}${
+	<a
+		href={`/${movie ? 'movies' : 'tvshows'}/${movie ? movie.id : show.id}`}
+		class="min-w-[164px] h-[110px] rounded-lg flex flex-col justify-between py-3 px-2 bg-cover hover:"
+		style={` background-image: url('${TMDB_IMAGE_URL}${
 			movie?.backdrop_path ?? show?.backdrop_path
 		}')`}
 	>
@@ -19,7 +20,7 @@
 				<img src={bookmarkIcon} alt="" />
 			</div>
 		</div>
-	</div>
+	</a>
 	<div>
 		<ul class=" flex items-center gap-2 text-xs text-text ">
 			<span>{movie?.release_date.slice(0, 4) ?? show?.first_air_date.slice(0, 4)}</span>

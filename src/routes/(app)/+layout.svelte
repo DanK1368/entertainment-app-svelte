@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		if (!$user) {
+		if ($user === null) {
 			goto('/login');
 		}
 	});

@@ -4,7 +4,6 @@
 	import movieIcon from '../assets/icon-nav-movies.svg';
 
 	export let movie;
-	console.log(movie);
 </script>
 
 <a

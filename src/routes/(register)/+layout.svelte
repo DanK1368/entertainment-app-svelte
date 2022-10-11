@@ -1,4 +1,5 @@
 <script>
+	import '../../styles/global.css';
 	import logo from '../../assets/logo.svg';
 </script>
 

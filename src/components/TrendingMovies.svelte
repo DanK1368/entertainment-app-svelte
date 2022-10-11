@@ -4,9 +4,11 @@
 	import movieIcon from '../assets/icon-nav-movies.svg';
 
 	export let movie;
+	console.log(movie);
 </script>
 
-<div
+<a
+	href={`/movies/${movie.id}`}
 	class="min-w-[240px] h-[140px] rounded-lg flex flex-col justify-between py-3 px-2 bg-cover "
 	style={`background-image: url('${TMDB_IMAGE_URL}${movie?.backdrop_path}')`}
 >
@@ -28,4 +30,4 @@
 			<p class=" text-text text-sm ">{movie?.title}</p>
 		</div>
 	</div>
-</div>
+</a>

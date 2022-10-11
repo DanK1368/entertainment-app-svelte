@@ -1,10 +1,10 @@
 import { TMDB_API_KEY } from '$env/static/private';
 
 export const load = async ({ params }) => {
-	const fetchMovieDetails = async () => {
+	const fetchTvShowDetails = async () => {
 		try {
 			const resp = await fetch(
-				`https://api.themoviedb.org/3/movie/${params.movie_id}?api_key=${TMDB_API_KEY}&language=en-US`
+				`https://api.themoviedb.org/3/tv/${params.tvshows_id}?api_key=${TMDB_API_KEY}&language=en-US`
 			);
 
 			if (resp.status !== 200) throw new Error('Something went wrong');
@@ -19,6 +19,6 @@ export const load = async ({ params }) => {
 	};
 
 	return {
-		itemDetails: fetchMovieDetails()
+		itemDetails: fetchTvShowDetails()
 	};
 };

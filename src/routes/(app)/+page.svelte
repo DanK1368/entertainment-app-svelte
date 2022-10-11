@@ -1,5 +1,4 @@
 <script>
-	import { redirect } from '@sveltejs/kit';
 	import { supabase } from '$lib/clients/supabaseClient';
 	import { user } from '$lib/store/sessionStore';
 	import TrendingMovies from '../../components/TrendingMovies.svelte';

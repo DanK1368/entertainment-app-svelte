@@ -7,21 +7,6 @@
 	import tvShows from '../assets/icon-nav-tv-series.svg';
 	import bookmark from '../assets/icon-nav-bookmark.svg';
 	import avatar from '../assets/image-avatar.png';
-
-	let loading = false;
-
-	const signOut = async () => {
-		try {
-			loading = true;
-			let { error } = await supabase.auth.signOut();
-			if (error) throw error;
-			goto('/login');
-		} catch (error) {
-			alert(error.message);
-		} finally {
-			loading = false;
-		}
-	};
 </script>
 
 <header class=" min-h-[10vh] bg-baseColor flex justify-between items-center px-4 ">
@@ -45,7 +30,7 @@
 		</a>
 	</nav>
 
-	<button class=" w-[40px] h-[40px] border-2 border-[white] rounded-full " on:click={signOut}>
+	<a href="/profile" class=" w-[40px] h-[40px] border-2 border-[white] rounded-full ">
 		<img class=" object-cover " src={avatar} alt="user avatar" />
-	</button>
+	</a>
 </header>

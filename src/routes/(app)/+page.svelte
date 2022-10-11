@@ -1,10 +1,15 @@
 <script>
+	import { redirect } from '@sveltejs/kit';
+	import { supabase } from '$lib/clients/supabaseClient';
+	import { user } from '$lib/store/sessionStore';
 	import TrendingMovies from '../../components/TrendingMovies.svelte';
 	import Card from '../../components/Card.svelte';
 	import CardGrid from '../../components/CardGrid.svelte';
 	import SearchBar from '../../components/SearchBar.svelte';
 	export let data;
 	const { trendingMovies, topRatedMovies } = data;
+
+	user.set(supabase.auth.user());
 </script>
 
 <SearchBar placeholder="Search for movies or TV Series" />

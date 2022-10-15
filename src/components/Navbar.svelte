@@ -1,6 +1,4 @@
 <script>
-	import { supabase } from '$lib/clients/supabaseClient';
-	import { goto } from '$app/navigation';
 	import logo from '../assets/logo.svg';
 	import home from '../assets/icon-nav-home.svg';
 	import movies from '../assets/icon-nav-movies.svg';

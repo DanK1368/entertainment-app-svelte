@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { supabase } from '$lib/clients/supabaseClient';
 	import { user } from '$lib/store/sessionStore';
-	import avatar from '../../../assets/image-avatar.png';
+	import Avatar from '../../../components/Avatar.svelte';
 
 	let isDisabled = true;
 	let loading = true;
@@ -50,6 +50,7 @@
 				first_name: first_name,
 				last_name: last_name,
 				phone_number: phone_number,
+				avatar_url: avatar_url,
 				updated_at: new Date()
 			};
 
@@ -96,16 +97,13 @@
 			>
 		</div>
 		<div class=" flex flex-col gap-10 pt-5 md:flex-row md:items-center md:gap-20 ">
-			<div class=" place-self-start  ">
-				<img
-					class="  max-w-full w-[100px] h-[100px] object-cover rounded-full outline-2 outline-red-600 outline md:mr-5 "
-					src={avatar}
-					alt="profile"
-				/>
-			</div>
 			<form class=" flex flex-col gap-5 " use:getProfile on:submit|preventDefault={updateProfile}>
 				<div>
 					<h3 class=" text-gray-400 text-xl ">Info</h3>
+				</div>
+
+				<div class=" w-full">
+					<Avatar bind:path={avatar_url} on:upload={updateProfile} />
 				</div>
 
 				<div class=" w-fit grid grid-cols-2 gap-5 md:grid-cols-3 md:gap-10 ">

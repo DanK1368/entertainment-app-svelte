@@ -2,12 +2,19 @@
 	import { TMDB_HD_IMAGE_URL } from '$lib/constants/urls';
 
 	export let itemDetails;
+
+	let innerWidth = 0;
 </script>
 
-<section class=" text-text h-[90vh]  flex justify-start items-center ">
+<svelte:window bind:innerWidth />
+
+<section class=" text-text h-[90vh]  flex justify-start items-center lg:max-w-xl">
 	<img
-		class=" absolute top-[10vh] h-[90vh] w-screen left-0 z-[-1] object-cover"
-		src={`${TMDB_HD_IMAGE_URL}/${itemDetails?.poster_path}`}
+		class=" absolute top-[10vh] h-[90vh] w-screen left-0 z-[-1] object-cover md:top-0 md:h-[100vh]"
+		src={`${TMDB_HD_IMAGE_URL}/${
+			// for larger screens we use the backdrop path since the image is more suitable
+			innerWidth >= 1024 ? itemDetails?.backdrop_path : itemDetails?.poster_path
+		}`}
 		alt=""
 	/>
 	<div class="bg-secondary/80  p-6 flex flex-col gap-3 rounded-xl ">

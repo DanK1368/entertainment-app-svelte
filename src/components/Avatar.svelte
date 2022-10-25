@@ -1,7 +1,6 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
 	import { supabase } from '$lib/clients/supabaseClient';
-	import { profileAvatar } from '$lib/store/profile';
 
 	export let path;
 
@@ -18,7 +17,6 @@
 			.then(({ data, error }) => {
 				if (error) throw error;
 				src = URL.createObjectURL(data);
-				profileAvatar.set(src);
 			})
 			.catch((error) => console.error('Error downloading image: ', error.message));
 	}

@@ -11,7 +11,7 @@
 <div class=" flex flex-col gap-2 ">
 	<a
 		href={`/${movie ? 'movies' : 'tvshows'}/${movie ? movie.id : show.id}`}
-		class="min-w-[164px] h-[110px] rounded-lg flex flex-col justify-between py-3 px-2 bg-cover relative thumbnail "
+		class="min-w-[164px] h-[110px] rounded-lg flex flex-col justify-between py-3 px-2 bg-cover relative thumbnail md:min-w-[220px] md:min-h-[140px] "
 		style={` background-image: url('${TMDB_IMAGE_URL}${
 			movie?.backdrop_path ?? show?.backdrop_path
 		}')`}

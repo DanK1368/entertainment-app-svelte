@@ -22,7 +22,7 @@
 	}
 
 	.customRegistrationForm {
-		@apply bg-baseColor py-8  px-6 flex flex-col justify-center gap-8 w-full rounded-xl;
+		@apply bg-baseColor py-8  px-6 flex flex-col justify-center gap-8 w-full rounded-xl max-w-md;
 	}
 
 	.scrollbar-hide::-webkit-scrollbar {
@@ -38,5 +38,11 @@
 	.customGridTemplate {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
+	}
+
+	@media (min-width: 768px) {
+		.customGridTemplate {
+			grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+		}
 	}
 }

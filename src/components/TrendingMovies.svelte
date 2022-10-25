@@ -8,7 +8,7 @@
 
 <a
 	href={`/movies/${movie.id}`}
-	class="min-w-[240px] h-[140px] rounded-lg flex flex-col justify-between py-3 px-2 bg-cover "
+	class="min-w-[240px] min-h-[140px] rounded-lg flex flex-col justify-between py-3 px-2 bg-cover md:min-w-[470px] md:min-h-[230px] lg:max-w-[470px] "
 	style={`background-image: url('${TMDB_IMAGE_URL}${movie?.backdrop_path}')`}
 >
 	<div class=" flex justify-end items-center ">

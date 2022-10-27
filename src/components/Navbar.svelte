@@ -10,7 +10,9 @@
 <header
 	class=" min-h-[10vh] bg-baseColor flex justify-between items-center px-4 md:min-w-[719px] md:m-auto md:rounded-xl md:min-h-[8vh] md:mt-10 lg:flex-col   lg:min-w-[96px] lg:min-h-[90vh] lg:py-6 lg:mx-0 "
 >
-	<img src={logo} alt="" />
+	<a href="/" aria-label="click to go to home-page">
+		<img src={logo} alt="" />
+	</a>
 
 	<nav class=" flex justify-center items-center gap-6 lg:flex-col ">
 		<a href="/">

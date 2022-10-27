@@ -4,7 +4,7 @@
 	import SearchBar from '../../../../../components/SearchBar.svelte';
 
 	export let data;
-	const { searchResults } = data;
+	$: ({ searchResults } = data);
 </script>
 
 <SearchBar placeholder="Search for Movies" />

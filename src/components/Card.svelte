@@ -30,7 +30,7 @@
 	</a>
 	<div>
 		<ul class=" flex items-center gap-2 text-xs text-text ">
-			<span>{movie?.release_date.slice(0, 4) ?? show?.first_air_date.slice(0, 4)}</span>
+			<span>{movie?.release_date?.slice(0, 4) ?? show?.first_air_date?.slice(0, 4)}</span>
 			<li class=" flex items-center justify-center gap-2 ">
 				<img src={movieIcon} alt="" />
 				Movie

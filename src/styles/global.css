@@ -40,6 +40,10 @@
 		grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
 	}
 
+	.svg-hover-style:hover > svg path {
+		@apply fill-primary;
+	}
+
 	@media (min-width: 768px) {
 		.customGridTemplate {
 			grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

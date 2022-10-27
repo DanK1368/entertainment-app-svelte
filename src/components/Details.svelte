@@ -22,7 +22,7 @@
 			<h2 class=" text-xl text-primary ">{itemDetails?.title ?? itemDetails?.name}</h2>
 			<p>
 				<span class="text-primary">Score:</span>
-				{itemDetails?.vote_average.toFixed(1)} / 10
+				{itemDetails?.vote_average?.toFixed(1)} / 10
 			</p>
 		</div>
 		<h3>

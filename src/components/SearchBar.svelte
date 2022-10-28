@@ -1,10 +1,18 @@
 <script>
 	import { goto } from '$app/navigation';
 	import searchIcon from '../assets/icon-search.svg';
+	import { page } from '$app/stores';
 
-	export let placeholder;
-
+	// export let placeholder;
 	let searchValue = '';
+
+	const handleInputPlaceholder = (url) => {
+		if (url === '/' || url === '/movies') return 'Search for Movies';
+		else if (url === '/tvshows') return 'Search for Tv Shows';
+		else if (url === '/bookmarked') return 'Search in Bookmarks';
+	};
+
+	$: placeholder = handleInputPlaceholder($page.url.pathname);
 
 	const handleSearch = () => {
 		goto(`/movies/search/${searchValue}`);

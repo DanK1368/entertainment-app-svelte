@@ -16,6 +16,7 @@
 <div class=" flex flex-col justify-between lg:flex-row lg:pl-4 lg:justify-start  ">
 	<Navbar />
 	<div class=" px-4 lg:overflow-x-hidden lg:pt-5 ">
+		<SearchBar />
 		<slot />
 	</div>
 </div>

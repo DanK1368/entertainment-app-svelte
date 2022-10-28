@@ -6,7 +6,6 @@
 	const { topRatedMovies } = data;
 </script>
 
-<SearchBar placeholder="Search for Movies" />
 <CardGrid title="Movies">
 	{#each topRatedMovies as movie (movie.id)}
 		<Card {movie} />

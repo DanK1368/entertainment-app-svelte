@@ -44,6 +44,10 @@
 		@apply fill-primary;
 	}
 
+	.active > svg path {
+		fill: white;
+	}
+
 	@media (min-width: 768px) {
 		.customGridTemplate {
 			grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

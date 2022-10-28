@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import logo from '../assets/logo.svg';
 	import avatar from '../assets/image-avatar.png';
 	import HomeSvg from '../components/svgs/HomeSvg.svelte';
@@ -16,19 +17,19 @@
 
 	<nav class=" flex justify-center items-center gap-6 lg:flex-col ">
 		<a href="/">
-			<HomeSvg />
+			<HomeSvg active={$page.url.pathname === '/'} />
 		</a>
 
 		<a href="/movies">
-			<MoviesSvg />
+			<MoviesSvg active={$page.url.pathname === '/movies'} />
 		</a>
 
 		<a href="/tvshows">
-			<TvSeriesSvg />
+			<TvSeriesSvg active={$page.url.pathname === '/tvshows'} />
 		</a>
 
 		<a href="/bookmarked">
-			<BookmarkSvg />
+			<BookmarkSvg active={$page.url.pathname === '/bookmarked'} />
 		</a>
 	</nav>
 

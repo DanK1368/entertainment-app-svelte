@@ -7,9 +7,11 @@
 	$: ({ searchResults } = data);
 </script>
 
-<SearchBar placeholder="Search for Movies" />
-<CardGrid title="Search Results">
-	{#each searchResults as movie (movie.id)}
-		<Card {movie} />
-	{/each}
-</CardGrid>
+<!-- <SearchBar placeholder="Search for Movies" /> -->
+<div class=" mt-10 ">
+	<CardGrid title="Search Results">
+		{#each searchResults as movie (movie.id)}
+			<Card {movie} />
+		{/each}
+	</CardGrid>
+</div>

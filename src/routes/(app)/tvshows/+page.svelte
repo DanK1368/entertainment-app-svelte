@@ -7,6 +7,7 @@
 	const { topRatedTvShows } = data;
 </script>
 
+<SearchBar placeholder="Search for TV Shows" />
 <CardGrid title="TV Series">
 	{#each topRatedTvShows as show (show.id)}
 		<Card {show} />

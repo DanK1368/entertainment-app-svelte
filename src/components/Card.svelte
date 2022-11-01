@@ -33,7 +33,7 @@
 			<span>{movie?.release_date?.slice(0, 4) ?? show?.first_air_date?.slice(0, 4)}</span>
 			<li class=" flex items-center justify-center gap-2 ">
 				<img src={movieIcon} alt="" />
-				Movie
+				{movie ? 'Movie' : 'TV Show'}
 			</li>
 			<li>PG</li>
 		</ul>

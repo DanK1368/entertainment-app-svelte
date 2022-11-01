@@ -2,7 +2,6 @@
 	import { goto } from '$app/navigation';
 	import searchIcon from '../assets/icon-search.svg';
 	import { page } from '$app/stores';
-	console.log($page.url.pathname);
 
 	export let placeholder;
 	let searchValue = '';
@@ -16,9 +15,9 @@
 	// $: placeholder = handleInputPlaceholder($page.url.pathname);
 
 	const handleSearch = () => {
-		if ($page.url.pathname === '/movies' || $page.url.pathname === '/') {
+		if ($page.url.pathname.startsWith('/movies') || $page.url.pathname === '/') {
 			goto(`/movies/search/${searchValue}`);
-		} else if ($page.url.pathname === '/tvshows') {
+		} else if ($page.url.pathname.startsWith('/tvshows')) {
 			goto(`/tvshows/search/${searchValue}`);
 		}
 	};
